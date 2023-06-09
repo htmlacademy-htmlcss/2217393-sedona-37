@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей Ткаченко](https://up.htmlacademy.ru/htmlcss/37/user/2217393).
-* Наставник: [Зиновьев Александр](https://htmlacademy.ru/profile/id198751).
+* Наставник: [Иван Жарков](https://htmlacademy.ru/profile/id191422).
 
 ---
 
