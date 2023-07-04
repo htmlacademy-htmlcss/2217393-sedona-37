@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="page-conteiner">
+  <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
         <a  class="main-logo" href="index.html">
@@ -17,13 +17,13 @@
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Главная</a>
+            <a class="navigation-link navigation-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-current" href="#">Гостиницы</a>
+            <a class="navigation-link" href="#">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-user">
@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда</a>
+            <a class="navigation-link navigation--button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -61,9 +61,9 @@
         </header>
 
           <form class="filter-group" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="catalog-filter">
+            <fieldset class="catalog-checkbox">
               <legend class="catalog-filter__title">Инфраструктура:</legend>
-              <ul class="catalog-filter-list">
+              <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="pool" checked>Бассейн
@@ -81,7 +81,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="catalog-filter">
+            <fieldset class="catalog-radio">
               <legend class="catalog-filter__title">Тип жилья</legend>
               <ul class="catalog-filter__list">
                 <li class="catalog-filter__item">
@@ -104,9 +104,9 @@
             <fieldset class="slider">
               <legend class="slider-range">Стоимость, ₽:</legend>
             </fieldset>
-            <div class="manage">
-              <button class="button-filter" type="submit">Применить</button>
-              <button class="button-filter" type="reset">Сбросить</button>
+            <div class="filter-button">
+              <button class="filter-button__submit" type="submit">Применить</button>
+              <button class="filter-button__reset" type="reset">Сбросить</button>
             </div>
           </form>
       </section>
@@ -139,18 +139,18 @@
             <a class="hotel-card__link" href="#">
               <h3 class="hotel-card__title">Amara Resort & Spa</h3>
             </a>
-            <div class="hotel-features">
+            <!-- <div class="hotel-features"> -->
               <span class="hotel-price">Гостиница</span>
               <span class="hotel-price">От 4000 ₽</span>
-            </div>
-            <div class="hotel-features">
+            <!-- </div> -->
+            <!-- <div class="hotel-features"> -->
               <a class="hotel-card__button" href="#">подробнее</a>
               <button class="button-card" type="button">в избранное</button>
-            </div>
-            <div class="hotel-features hotel-stars">
+            <!-- </div> -->
+            <!-- <div class="hotel-features hotel-stars"> -->
               <span class="stars"></span>
               <span class="hotel-rank">Рейтинг: 8,5</span>
-            </div>
+            <!-- </div> -->
           </li>
           <li class="hotel-card">
             <a class="hotel-card__link" href="#">
@@ -159,18 +159,18 @@
             <a class="hotel-card__link" href="#">
               <h3 class="hotel-card__title">Villas at Poco Diablo</h3>
             </a>
-            <div class="hotel-features">
+            <!-- <div class="hotel-features"> -->
               <span class="hotel-price">Гостиница</span>
               <span class="hotel-price">От 5000 ₽</span>
-            </div>
-            <div class="hotel-features">
+            <!-- </div> -->
+            <!-- <div class="hotel-features"> -->
               <a class="hotel-card__button" href="#">подробнее</a>
               <button class="button-card button-selected" type="button">в избранном</button>
-            </div>
-            <div class="hotel-features hotel-stars">
+            <!-- </div> -->
+            <!-- <div class="hotel-features hotel-stars"> -->
               <span class="stars"></span>
               <span class="hotel-rank">Рейтинг: 9,2</span>
-            </div>
+            <!-- </div> -->
           </li>
           <li class="hotel-card">
             <a class="hotel-card__link" href="#">
@@ -179,18 +179,18 @@
             <a class="hotel-card__link" href="#">
               <h3 class="hotel-card__title">Desert Quail Inn</h3>
             </a>
-            <div class="hotel-features">
+            <!-- <div class="hotel-features"> -->
               <span class="hotel-price">Гостиница</span>
               <span class="hotel-price">От 2500 ₽</span>
-            </div>
-            <div class="hotel-features">
+            <!-- </div> -->
+            <!-- <div class="hotel-features"> -->
               <a class="hotel-card__button" href="#">подробнее</a>
-              <button class="button__card" type="button">в избранное</button>
-            </div>
-            <div class="hotel-features hotel-stars">
+              <button class="button-card" type="button">в избранное</button>
+            <!-- </div> -->
+            <!-- <div class="hotel-features hotel-stars"> -->
               <span class="stars"></span>
               <span class="hotel-rank">Рейтинг: 6,9</span>
-            </div>
+            <!-- </div> -->
           </li>
           <li class="hotel-card">
             <a class="hotel-card__link" href="#">
@@ -199,18 +199,18 @@
             <a class="hotel-card__link" href="#">
               <h3 class="hotel-card__title">GreenTree Inn</h3>
             </a>
-            <div class="hotel-features">
+            <!-- <div class="hotel-features"> -->
               <span class="hotel-price">Гостиница</span>
               <span class="hotel-price">От 1500 ₽</span>
-            </div>
-            <div class="hotel-features">
+            <!-- </div> -->
+            <!-- <div class="hotel-features"> -->
               <a class="hotel-card__button" href="#">подробнее</a>
               <button class="button-card" type="button">в избранное</button>
-            </div>
-            <div class="hotel-features hotel-stars">
+            <!-- </div> -->
+            <!-- <div class="hotel-features hotel-stars"> -->
               <span class="stars"></span>
               <span class="hotel-rank">Рейтинг: 5,0</span>
-            </div>
+            <!-- </div> -->
           </li>
         </ul>
         <ol class="pagination">
@@ -237,11 +237,11 @@
 
       <section class="subscribe">
         <h2 class="subscribe-title subscribe-title__catalog">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text subscribe-text__catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="form" action="https://echo.htmlacademy.ru" Method="post">
+        <p class="subscribe-text subscribe-text__catalog">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="subscribe-email"></label>
-          <input class="email" type="email" placeholder="Ваш e-mail" name="subscribe-email" id="subscribe-email" required>
-          <button class="submit" type="submit">ПОДПИСАТЬСЯ</button>
+          <input class="email email-catalog" type="email" placeholder="Ваш e-mail" name="subscribe-email" id="subscribe-email" required>
+          <button class="button subscribe-form--button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -273,7 +273,9 @@
       </div>
 
       <div class="footer-logo">
-        <a class="logo-htmlacademy" href="https://htmlacademy.ru/"></a>
+        <a class="logo-htmlacademy" src="images/logo-academy.svg">
+          <img src="images/logo-academy.svg" alt="логотип">
+        </a>
       </div>
     </footer>
   </div>
