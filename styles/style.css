@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,12 +10,18 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 html {
 height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -66,7 +72,6 @@ body {
 .navigation {
   display: flex;
   position: relative;
-  height: 64px;
   padding: 0 70px;
 }
 
@@ -76,16 +81,15 @@ position: absolute;
 
 .navigation-list {
   display: flex;
-  /* min-width: 339px; */
   margin: 0;
   padding: 0;
   margin-left: 170px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .navigation-user {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   margin: 0;
   margin-left: auto;
@@ -115,8 +119,6 @@ position: absolute;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-  min-width: 60px;
-  min-height: 20px;
   padding: 8px 35px;
   border-radius: 4px;
   background-color: #756157;
@@ -124,13 +126,12 @@ position: absolute;
 }
 
 .welcome {
-  background-image: url(images/index-background.jpg);
+  background-image: url(../images/index-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #474747;
   text-align: center;
   padding: 49px 70px 78px;
-  /* padding-bottom: 82px; */
 }
 
 .advantages-main {
@@ -161,7 +162,6 @@ position: absolute;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .advantages-item {
@@ -195,6 +195,14 @@ position: absolute;
   background-color: rgba(131, 179, 211, 0.20);
 }
 
+.advantages-item--img {
+  color: #ffffff;
+}
+
+.advantages-item--img .advantages-title {
+  color: #ffffff;
+}
+
 .advantages-title {
   font-weight: 700;
   font-size: 24px;
@@ -213,7 +221,7 @@ position: absolute;
 
 .advance-advice {
   text-align: center;
-  padding: 64px 0;
+  padding: 64px 70px;
   }
 
 .advance-title {
@@ -247,6 +255,7 @@ position: absolute;
   justify-content: center;
   width: 400px;
   min-height: 385px;
+  padding: 80px 85px;
 }
 
 .advance-item--side {
@@ -308,7 +317,7 @@ position: absolute;
 }
 
 .subscribe--img {
-  background-image: url(images/subscribe.jpg);
+  background-image: url(../images/subscribe.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #333333;
@@ -355,8 +364,6 @@ position: absolute;
 
 .subscribe-form--button {
   font-size: 20px;
-  min-width: 132px;
-  min-height: 36px;
   padding: 8px 50px;
   border: none;
   border-radius: 0 4px 4px 0;
@@ -374,6 +381,7 @@ position: absolute;
   display: flex;
   justify-content: space-between;
   margin: 0;
+  list-style: none;
 }
 
 .tel {
@@ -391,7 +399,7 @@ position: absolute;
 ***********************/
 
 .filter {
-  background-image: url(images/filter-bg.jpg);
+  background-image: url(../images/filter-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #333333;
@@ -399,10 +407,24 @@ position: absolute;
   padding: 35px 70px 70px ;
 }
 
+.inner-header__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
 .breadcrumbs {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  line-height: 21px;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -411,40 +433,44 @@ position: absolute;
   line-height: 21px;
 }
 
-.inner-header__title {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 78px;
-  margin: 0;
-}
-
 .filter-group {
   display: flex;
 }
 
 .filter-group fieldset {
   border: none;
+  padding: 0;
 }
-
 
 .catalog-checkbox {
   margin-right: 70px;
-}
-
-.catalog-radio {
-  margin-right: 140px;
+  padding: 0;
 }
 
 .catalog-filter__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.catalog-filter__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
 }
 
 .control-input {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+}
+
+.catalog-radio {
+  margin-right: 140px;
 }
 
 .slider {
@@ -464,11 +490,15 @@ position: absolute;
 }
 
 .filter-button__submit {
+  border: none;
+  padding: 8px 50px;
   color: #ffffff;
   background-color: #82B3D3;
 }
 
 .filter-button__reset {
+  border: none;
+  padding: 8px 50px;
   color: #ffffff;
   background-color: transparent;
 }
@@ -502,6 +532,7 @@ position: absolute;
   list-style: none;
   gap: 20px;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   justify-content: center;
 }
@@ -511,6 +542,7 @@ position: absolute;
   grid-template-columns: repeat(2, 140px);
   grid-template-rows: 212px 1fr;
   gap: 16px 20px;
+  padding: 19px;
   border: 1px solid #E6E6E6;
 }
 
@@ -547,7 +579,10 @@ position: absolute;
 }
 
 .button-card {
-  font-style: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
   border: none;
   border-radius: 4px;
   color: #ffffff;
@@ -565,24 +600,58 @@ position: absolute;
   padding: 9px 0 8px;
   text-align: center;
   text-transform: uppercase;
+  border-radius: 4px;
   background-color: #f2f2f2;
 }
 
 .pagination {
   display: flex;
+  position: relative;
   list-style: none;
+  gap: 8px;
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.pagination::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 40px;
+  background-color: #E6E6E6;
+}
+
+.pagination-item span{
+  display: flex;
+  min-width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-link {
+  display: flex;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  height: 60px;
+  min-width: 60px;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #82B3D3;
 }
 
 .pagination-link--current {
   color: #000000;
+  background-color: #f2f2f2;
 }
 
 .subscribe-title__catalog {
