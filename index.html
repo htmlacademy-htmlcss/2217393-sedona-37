@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head>
+
   <body>
-    <div class="conteiner">
+    <div class="page-container">
       <header class="page-header">
         <nav class="navigation">
           <a  class="main-logo" href="index.html">
@@ -17,10 +18,10 @@
               <a class="navigation-link navigation-current" href="#">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">О седоне</a>
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -35,7 +36,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Хочу сюда</a>
+              <a class="navigation-link navigation--button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -48,35 +49,37 @@
         </section>
 
         <section class="advantages">
-          <h2 class="advantages-main__title">Седона — небольшой городок в Аризоне,
-            заслуживающий большего!
-          </h2>
-          <p class="advantages-main__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <div class="advantages-main">
+            <h2 class="advantages-main__title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!
+            </h2>
+            <p class="advantages-main__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
+
           <ul class="advantages-list">
-            <li class="advantages-item">
-              <div class="advantages-block advantages-block--1">
-                <h3 class="advantages-title">Настоящий городок</h3>
-                <p class="advantages-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <li class="advantages-item advantages-item--img">
+              <div class="advantages-block">
+                <h3 class="advantages-title">Настоящий<br>городок</h3>
+                <p class="advantages-text">Седона — не аттракцион для<br>туристов, там течёт своя<br> жизнь</p>
               </div>
               <img src="images/advantage-photo-1.jpg" alt="Небольшие постройки и растительность" width="800" height="384">
             </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title">Небольшая площадь</h3>
-              <p class="advantages-text">Все достопримечательности находятся очень близко</p>
+            <li class="advantages-item advantages-item--text advantages-item--aside">
+              <h3 class="advantages-title">Небольшая<br>площадь</h3>
+              <p class="advantages-text">Все достопримечательности<br> находятся очень близко</p>
             </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title">Красивая дорога</h3>
-              <p class="advantages-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="advantages-item advantages-item--text advantages-item--center">
+              <h3 class="advantages-title">Красивая<br>дорога</h3>
+              <p class="advantages-text">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!</p>
             </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title">Мало туристов</h3>
-              <p class="advantages-text">Большинство едет в Гранд Каньон и толпится там</p>
+            <li class="advantages-item advantages-item--text advantages-item--aside">
+              <h3 class="advantages-title">Мало<br>туристов</h3>
+              <p class="advantages-text">Большинство едет в Гранд<br>Каньон и толпится там</p>
             </li>
-            <li class="advantages-item">
+            <li class="advantages-item advantages-item--img">
               <img src="images/advantage-photo-2.jpg" alt="Каньон" width="800" height="384">
-              <div class="advantages-block advantages-block--2">
-                <h3 class="advantages-title">Там есть мост дьявола</h3>
-                <p class="advantages-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <div class="advantages-block">
+                <h3 class="advantages-title">Там есть<br>мост дьявола</h3>
+                <p class="advantages-text">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется</p>
               </div>
             </li>
           </ul>
@@ -84,41 +87,41 @@
 
         <section class="advance">
           <div class="advance-advice">
-            <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-            <p>Опытный персонал и качественное обслуживание!</p>
+            <h2 class="advance-title">Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</h2>
+            <p class="advance-text">Опытный персонал и качественное обслуживание!</p>
           </div>
           <ul class="advance-list">
-            <li class="advance-item">
-              <h3>Жильё</h3>
-              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <li class="advance-item advance-item--side">
+              <h3 class="advance-item__title">Жильё</h3>
+              <p class="advance-item__text">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
             </li>
             <li class="advance-item">
-              <h3>Еда</h3>
-              <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <h3 class="advance-item__title">Еда</h3>
+              <p class="advance-item__text">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
             </li>
-            <li class="advance-item">
-              <h3>Сувениры</h3>
-              <p>Не только китайского, но и настоящего местного производства!</p>
+            <li class="advance-item advance-item--side">
+              <h3 class="advance-item__title">Сувениры</h3>
+              <p class="advance-item__text">Не только китайского,<br>но и настоящего местного<br>производства!</p>
             </li>
           </ul>
         </section>
 
         <section class="offer">
           <h2 class="offer-title">Заинтересовались?</h2>
-          <p class="offer-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="offer-button" href="#">Поиск гостиницы в седоне</a>
         </section>
+      </main>
 
-        <section class="subscribe subscribe-2">
+        <section class="subscribe subscribe--img">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
             <label for="subscribe-email"></label>
             <input class="email" type="email" placeholder="Ваш e-mail" name="subscribe-email" id="subscribe-email" required>
-            <button class="submit" type="submit">Подписаться</button>
+            <button class="button subscribe-form--button" type="submit">Подписаться</button>
           </form>
         </section>
-      </main>
 
       <footer class="page-footer">
         <section class="footer-social">
@@ -147,7 +150,9 @@
         </div>
 
         <div class="footer-logo">
-          <a class="logo-htmlacademy" src="images/logo-academy.svg" href="https://htmlacademy.ru/"></a>
+          <a class="logo-htmlacademy" href="https://htmlacademy.ru/">
+            <img src="images/logo-academy.svg" alt="логотип">
+          </a>
         </div>
       </footer>
     </div>
