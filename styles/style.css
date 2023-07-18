@@ -647,6 +647,9 @@ a[href^="tel:"]:active {
   margin: auto;
 }
 
+
+/* ******* filter-group ******* */
+
 .filter-group {
   display: flex;
 }
@@ -679,11 +682,8 @@ a[href^="tel:"]:active {
   margin: 0;
 }
 
-.catalog-filter__item {
-  /* display: flex; */
-}
-
 .control {
+  /* position: relative; */
   font-size: 18px;
   line-height: 23px;
   background-position: center;
@@ -695,7 +695,6 @@ a[href^="tel:"]:active {
 }
 
 .control-input[type="checkbox"] {
-  background-color: #fff;
   border-radius: 4px;
   appearance: none;
   width: 20px;
@@ -703,11 +702,38 @@ a[href^="tel:"]:active {
   margin: 0;
   margin-right: 16px;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .catalog-radio {
   margin: 0;
   margin-right: 70px;
+  min-width: 150px;
+}
+
+.control-input[type="radio"]:checked::before {
+  position: absolute;
+  content: "";
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  background-color: #3F5E72;
+}
+
+.control-input[type="radio"] {
+  position: relative;
+  border-radius: 50%;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
 .slider {
@@ -743,7 +769,7 @@ a[href^="tel:"]:active {
   border-radius: 4px;
   font-weight: 700;
   line-height: 24px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .range-input__left {
@@ -756,36 +782,35 @@ a[href^="tel:"]:active {
 
 .range-label span {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 18px;
-  font-weight: 400;
   line-height: 24px;
-  padding: 12px 20px;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: rgba(225, 225, 225, 0.30);
   border-radius: 2px;
+  background-color: rgba(225, 225, 225, 0.3);
 }
 
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .range-toggle {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  background: #ffffff;
 }
 
 .toggle-min {
