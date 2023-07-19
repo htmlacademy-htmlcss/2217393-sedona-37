@@ -779,6 +779,7 @@ a[href^="tel:"]:active {
   font-weight: 700;
   line-height: 24px;
   margin-top: 48px;
+  cursor: pointer;
   text-transform: uppercase;
   background: #83B3D3;
   color: #ffffff;
@@ -793,8 +794,8 @@ a[href^="tel:"]:active {
 }
 
 .modal-button:active {
-  background-color:#68A2CA;
-  opacity: 0.3;
+  background-color:  #82B3D3;
+  color: rgba(255, 255, 255, 0.3);;
 }
 
 .range-modal__wrap {
