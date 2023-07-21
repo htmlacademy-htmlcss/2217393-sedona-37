@@ -118,11 +118,12 @@ z-index: 1;
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
   margin-left: auto;
-  min-width: 160px;
+  min-width: 268px;
   list-style: none;
 }
 
@@ -147,6 +148,10 @@ z-index: 1;
   padding: 22px 12px;
 }
 
+.navigation-user__link:hover path {
+  fill-opacity: 0.6;
+}
+
 .navigation-user__like {
   display: flex;
   justify-content: center;
@@ -160,12 +165,12 @@ z-index: 1;
   line-height: 10px;
   padding: 4px 5px;
   top: 8px;
-  right: 3px;
+  left: 20px;
   color: #ffffff;
   background-color: #7DB54F;
 }
 
-.navigation--button {
+.navigation-button {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -179,15 +184,15 @@ z-index: 1;
   color: #ffffff;
 }
 
-.navigation--button:hover {
+.navigation-button:hover {
   background-color: #615048;
 }
 
-.navigation--button:focus {
+.navigation-button:focus {
   background-color: #615048;
 }
 
-.navigation--button:active {
+.navigation-button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 
@@ -522,7 +527,7 @@ background-color: rgba(255, 255, 255, 0.3);;
 
 .page-footer {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: center;
   padding: 40px 70px 30px;
@@ -530,11 +535,11 @@ background-color: rgba(255, 255, 255, 0.3);;
 
 .footer-social__list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .footer-social__item {
@@ -551,6 +556,10 @@ background-color: rgba(255, 255, 255, 0.3);;
 
 .button-social:active path {
   fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-info {
+  justify-self: end;
 }
 
 a[href^="tel:"] {
@@ -574,6 +583,10 @@ a[href^="tel:"]:focus {
 
 a[href^="tel:"]:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-logo {
+  justify-self: end;
 }
 
 .footer-logo__htmlacademy:hover path {
@@ -629,6 +642,7 @@ a[href^="tel:"]:active {
   margin-bottom: 64px;
   font-size: 30px;
   line-height: 36px;
+  max-width: 540px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -646,7 +660,6 @@ a[href^="tel:"]:active {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  z-index: 1;
   background-color: #F2F2F2;
 }
 
@@ -872,17 +885,17 @@ a[href^="tel:"]:active {
   fill: #756157;
 }
 
-.modal-icon:hover {
+.math-mark:hover svg {
   opacity: 1;
   fill: #000000;
 }
 
-.modal-icon:focus {
+.math-mark:focus svg {
   opacity: 1;
   fill: #000000;
 }
 
-.modal-icon:active {
+.math-mark:active svg {
   opacity: 0.3;
   fill: #000000;
 }
@@ -983,7 +996,7 @@ a[href^="tel:"]:active {
 .breadcrumbs-item:not(:last-child)::after {
   content: "";
   width: 7px;
-  height: 9px;
+  height: 10px;
   background-image: url(../images/breadcrumbs-arrow.svg);
   background-repeat: no-repeat;
   left: 10px;
@@ -997,24 +1010,25 @@ a[href^="tel:"]:active {
   cursor: pointer;
 }
 
-.breadcrumbs-link:hover {
+.breadcrumbs-link:hover,
+.breadcrumbs-link:hover path {
   color: rgba(255, 255, 255, 0.6);
+  fill:  rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:active {
+.breadcrumbs-link:active
+.breadcrumbs-link:active path {
+  color: rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumbs-link__main {
   width: 13px;
   height: 15px;
-  background-image: url(../images/breadcrumbs.svg);
-  background-repeat: no-repeat;
-  margin: auto;
+  margin: 0;
 }
 
 
-/* ******* filter-group ******* */
 
 .filter-group {
   display: flex;
@@ -1026,9 +1040,10 @@ a[href^="tel:"]:active {
 }
 
 .catalog-checkbox {
-  margin: 0;
   padding: 0;
+  margin: 0;
   margin-right: 70px;
+  max-width: 150px;
 }
 
 .catalog-filter__title {
@@ -1057,6 +1072,11 @@ a[href^="tel:"]:active {
   opacity: 0.3;
 }
 
+.catalog-filter__item:disabled {
+  cursor: not-allowed;
+  opacity: 0.1;
+}
+
 .control {
   display: flex;
   align-items: center;
@@ -1065,7 +1085,12 @@ a[href^="tel:"]:active {
 }
 
 .control-input:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
+}
+
+.control-input:disabled {
+  cursor: not-allowed;
+    opacity: 0.1;
 }
 
 .control-input[type="checkbox"]:checked {
@@ -1087,6 +1112,7 @@ a[href^="tel:"]:active {
 .catalog-radio {
   margin: 0;
   margin-right: 70px;
+  max-width: 150px;
 }
 
 .control-input[type="radio"]:checked::before {
@@ -1115,7 +1141,7 @@ a[href^="tel:"]:active {
 }
 
 
-/* ******* slider ******* */
+/* ******* слайдер ******* */
 
 .slider {
   margin: 0;
@@ -1213,6 +1239,7 @@ a[href^="tel:"]:active {
 .filter-button__submit {
   border: none;
   padding: 8px 50px;
+  cursor: pointer;
   color: #ffffff;
   background-color: #82B3D3;
 }
@@ -1233,6 +1260,7 @@ a[href^="tel:"]:active {
 .filter-button__reset {
   border: none;
   padding: 8px 50px;
+  cursor: pointer;
   background-color: transparent;
   color: #ffffff;
 }
@@ -1243,6 +1271,10 @@ a[href^="tel:"]:active {
 
 .filter-button__reset:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-button__reset:disabled {
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .hotel-choise {
@@ -1277,6 +1309,7 @@ a[href^="tel:"]:active {
   appearance: none;
   background-image: url(../images/selector-tick.svg);
   background-repeat: no-repeat;
+  cursor: pointer;
   background-position : right 20px center;
   border: 2px solid #E5E5E5;
 }
@@ -1302,14 +1335,10 @@ align-items: center;
   width: 16px;
   height: 14px;
   background-repeat: no-repeat;
-  padding: 22px 18px;
+  padding: 22px 22px;
   border-radius: 4px;
   background-position: center;
   border: 2px solid #E5E5E5;
-}
-
-.mode-button--current {
-  padding: 22px 22px;
 }
 
 .mode-table {
@@ -1361,6 +1390,10 @@ align-items: center;
 .hotel-card__link {
   text-decoration: none;
   grid-column: 2 span;
+}
+
+.hotel-card__link:hover {
+ opacity: 0.6;
 }
 
 .hotel-card__title {
@@ -1535,9 +1568,10 @@ align-items: center;
 }
 
 .pagination-link--current:hover {
+  border: none;
+  cursor: not-allowed;
   color: #000000;
   background-color: #f2f2f2;
-  border: none;
 }
 
 .subscribe-title__catalog {
