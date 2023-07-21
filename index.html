@@ -164,7 +164,7 @@
       <div class="modal-container modal-close">
         <div class="modal modal-block">
           <button class="modal-close__button" type="button">
-            <span class="visually-hidden">Закрыть</span>
+            <span class="visually-hidden">Закрыть.</span>
           </button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
@@ -188,13 +188,13 @@
                   </g>
                   </svg>
                 <span class="date-state">
-                  Мы не можем отправить вас в прошлое
+                  Мы не можем отправить вас в прошлое.
                 </span>
               </label>
 
               <label class="modal-date__lable">
                 <span class="modal-label__text">Дата выезда:</span>
-                <input class="modal-first__date calendar-svg" type="text" placeholder="Укажите дату" value="1 сентября 2023">
+                <input class="modal-first__date calendar-svg" type="text" placeholder="Укажите дату" name="departure-date" value="1 сентября 2023">
                 <svg class="input-icon" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="Vector">
                   <path d="M5.75 10C6.05 10 6.25 9.8 6.25 9.5C6.25 9.2 6.05 9 5.75 9C5.45 9 5.25 9.2 5.25 9.5C5.25 9.8 5.45 10 5.75 10Z" fill="black"></path>
@@ -211,7 +211,7 @@
                   </g>
                 </svg>
                 <span class="date-departure state">
-                  На эти даты есть свободные номера. Пока есть
+                  На эти даты есть свободные номера. Пока есть.
                 </span>
               </label>
 
@@ -221,12 +221,15 @@
                   <button class="math-mark modal-minus" type="button">
                     <svg class="modal-icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"></path>
                     </svg>
+                    <span class="visually-hidden">Минус.</span>
                   </button>
-                  <input class="people-count__field" value="2" min="0" max="10" type="number">
+                  <input class="people-count__field" name="adults"
+                  value="2" min="0" max="10" type="number">
                   <button class="math-mark modal-plus" type="button">
                     <svg class="modal-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path id="Vector" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
                       </svg>
+                      <span class="visually-hidden">Плюс.</span>
                   </button>
                 </div>
               </label>
@@ -245,12 +248,14 @@
                   <button class="math-mark modal-minus" type="button">
                     <svg class="modal-icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"></path>
                     </svg>
+                    <span class="visually-hidden">Минус.</span>
                   </button>
-                  <input class="people-count__field" value="2" min="0" max="10" type="number">
+                  <input class="people-count__field" name="child" value="2" min="0" max="10" type="number">
                   <button class="math-mark modal-plus" type="button">
                     <svg class="modal-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path id="Vector" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
                     </svg>
+                    <span class="visually-hidden">Плюс.</span>
                   </button>
                 </div>
               </label>
