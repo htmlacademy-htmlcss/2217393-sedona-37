@@ -213,15 +213,15 @@
                   </span>
                 </label>
 
-                <label for="adult-count" class="modal-adults__text">
-                  <span class="modal-label__text">Взрослые:</span>
+                <div class="modal-adults__text">
+                  <label class="modal-label__text" for="adult-count">Взрослые:</label>
                   <div class="range-modal__wrap">
                     <button class="math-mark modal-minus" type="button">
                       <svg class="modal-icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L0 2L14 2V0L0 0Z"></path>
                       </svg>
                       <span class="visually-hidden">Минус.</span>
                     </button>
-                    <input class="people-count__field" name="adults" value="2" min="0" max="10" type="number">
+                    <input class="people-count__field" id="adult-count" name="adults" value="2" min="0" max="10" type="number">
                     <button class="math-mark modal-plus" type="button">
                       <svg class="modal-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
@@ -229,10 +229,10 @@
                         <span class="visually-hidden">Плюс.</span>
                     </button>
                   </div>
-                </label>
+                </div>
 
-                <label for="adult-count" class="modal-child__text">
-                  <span class="modal-label__text tooltip-position">Дети:</span>
+                <div class="modal-child__text">
+                  <label class="modal-label__text tooltip-position"  for="child-count">Дети:</label>
                   <span class="tooltip">
                     <button class="tooltip-toggle" type="button" aria-label="tooltip-label-children">
                       <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="2" height="12" viewBox="0 0 2 12" fill="none">
@@ -243,11 +243,11 @@
                   </span>
                   <div class="range-modal__wrap">
                     <button class="math-mark modal-minus" type="button">
-                      <svg class="modal-icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"></path>
+                      <svg class="modal-icon" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L0 2L14 2V0L0 0Z"></path>
                       </svg>
                       <span class="visually-hidden">Минус.</span>
                     </button>
-                    <input class="people-count__field" name="child" value="2" min="0" max="10" type="number">
+                    <input class="people-count__field" id="child-count" name="child" value="2" min="0" max="10" type="number">
                     <button class="math-mark modal-plus" type="button">
                       <svg class="modal-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
@@ -255,7 +255,7 @@
                       <span class="visually-hidden">Плюс.</span>
                     </button>
                   </div>
-                </label>
+                </div>
 
                 <button class="modal-button" type="submit">Найти</button>
               </form>
